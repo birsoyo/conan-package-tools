@@ -167,6 +167,9 @@ won't be able to use them.
         elif self._os_name == "FreeBSD":
             return get_linux_clang_builds(self._clang_versions, self._archs, shared_option_name,
                                           pure_c, self._build_types, self._options, ref)
+        elif self._os_name == "Android":
+            return get_linux_clang_builds(self._clang_versions, self._archs, shared_option_name,
+                                          pure_c, self._build_types, self._options, ref)
         else:
             raise Exception("Unknown operating system: %s" % self._os_name)
 
